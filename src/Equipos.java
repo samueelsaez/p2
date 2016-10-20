@@ -9,7 +9,7 @@ public class Equipos {
 	private static ArrayList<Traspaso> traspasos = new ArrayList<Traspaso>();
 	private Equipo equipo;
 	private String nombreEquipo; 
-	private float cajaActual, gastos_fijos, gastos_variables;
+	private float cajaActual, gastos_generales;
 	private int numAbonados;
 	static Scanner entrada1 = new Scanner(System.in);
 	static Scanner entrada2 = new Scanner(System.in);
@@ -31,12 +31,9 @@ public class Equipos {
 		numAbonados=entrada2.nextInt();
 		
 		System.out.println("Introduce los gastos fijos: ");
-		gastos_fijos=entrada2.nextInt();
+		gastos_generales=entrada2.nextInt();
 		
-		System.out.println("Introduce los gastos variables: ");
-		gastos_variables=entrada2.nextInt();
-		
-		equipo = new Equipo(nombreEquipo, cajaActual, numAbonados, gastos_fijos, gastos_variables);
+		equipo = new Equipo(nombreEquipo, cajaActual, numAbonados, gastos_generales);
 		// Le pasamos los datos al constructor de Equipo para que guarde el nuevo equipo.
 		
 		equipos.add(equipo);
@@ -77,7 +74,7 @@ public class Equipos {
 		
 	public Equipo getEquipo(String team) {
 		
-		Equipo team1 = new Equipo("",0,0,0,0);
+		Equipo team1 = new Equipo("",0,0,0);
 		
 		for( int i = 0; i < equipos.size(); i++ ){
 			

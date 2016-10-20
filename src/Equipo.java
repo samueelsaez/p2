@@ -6,7 +6,7 @@ public class Equipo {
 	//Declaracion de variables a usar en esta clase
 	
 	private String nombreEquipo, nombre, posicion;
-	private float cajaActual, clausula, gasto_fijo, gasto_variable;
+	private float cajaActual, clausula, gasto_general;
 	private int numAbonados, num_equipo;
 	private ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
 	private static int numprox_equipo=1;
@@ -17,14 +17,13 @@ public class Equipo {
 	/* Constructor por parametros, al cual le asignamos un nuevo equipo formado por el nombre, 
 		la caja actual y los abonados que tiene. */
 		
-	public Equipo(String nombreEquipo, float cajaActual, int numAbonados, float gf, float gv){
+	public Equipo(String nombreEquipo, float cajaActual, int numAbonados, float gastoGeneral){
 		
 		this.nombreEquipo = nombreEquipo;
 		this.cajaActual = cajaActual;
 		this.numAbonados = numAbonados;
 		this.num_equipo = numprox_equipo++;
-		this.gasto_fijo = gf;
-		this.gasto_variable = gv;
+		this.gasto_general = gastoGeneral;
 	}
 	
 	// Devuelve el nombre del equipo 
@@ -34,13 +33,10 @@ public class Equipo {
 		return nombreEquipo;
 	}
 	
-	public float getGastoFijo () {
-		return gasto_fijo;
+	public float getGastoGenerak () {
+		return gasto_general;
 	}
 	
-	public float getGastoVariable () {
-		return gasto_variable;
-	}
 	
 	// Anyade un nuevo jugador al array de jugadores (previamente se habra comprobado que el equipo existe para introducirlo)
 	
@@ -141,8 +137,7 @@ public class Equipo {
 	@Override
 	public String toString() {
 		return "\n EQUIPO=>" + nombreEquipo + ", CAJA_ACTUAL=>" + cajaActual +", NºABONADOS=>" + numAbonados + 
-				", ID_EQUIPO=>" + num_equipo + ", \n" + "GASTOS_FIJOS=>" +gasto_fijo + ", GASTOS_VARIABLES=>" 
-				+ gasto_variable +  "]" ;
+				", ID_EQUIPO=>" + num_equipo + ", \n" + "GASTOS_GENERAL=>" + gasto_general +  "]" ;
 	}
 	
 	/*  Metodo que va recorriendo el vector de jugadores y uno a uno los va anyadiendo a una 
