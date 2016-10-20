@@ -31,7 +31,8 @@ public class Gestion {
 				System.out.println("4 - LISTAR DATOS BASICOS DE LOS EQUIPOS");
 				System.out.println("5 - LISTAR LOS JUGADORES DE CADA EQUIPO");
 				System.out.println("6 - MOSTRAR TRANSPASOS");
-				System.out.println("7 - GUARDAR Y CERRAR APLICACION\n");
+				System.out.println("7 - GUARDAR Y CERRAR APLICACION");
+				System.out.println("8 - CAMBIAR DEMARCACIÓN JUGADOR\n");
 				System.out.print("-- Introduzca opcion: ");
 				
 				try{
@@ -113,6 +114,19 @@ public class Gestion {
 
 						System.out.println("Cerrando...");
 						System.exit(0);
+						break;
+					case 8:	
+						
+						String posicionNew="";
+						String nameJugador="";
+						
+						System.out.println("Introduce nombre jugador");
+						nameJugador=entrada1.nextLine();
+						System.out.println("Introduce nueva demarcación");
+						posicionNew = entrada1.nextLine();
+							 
+						equipos.setPosicion(nameJugador, posicionNew);
+						
 						break;
 					default:
 						// Se dara en caso de que no se de ninguna de los Case anteriores.

@@ -45,4 +45,14 @@ public class Jugador {
 	public void setClausula(float clausula) {
 		this.clausula = clausula;
 	}
+
+	public String getPosicion() {
+		return posicion;
+	}
+
+	public void setPosicion(String posicion) {
+		this.posicion = posicion;
+	}
+	
+	
 }

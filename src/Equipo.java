@@ -33,7 +33,7 @@ public class Equipo {
 		return nombreEquipo;
 	}
 	
-	public float getGastoGenerak () {
+	public float getGastoGeneral () {
 		return gasto_general;
 	}
 	
@@ -137,7 +137,7 @@ public class Equipo {
 	@Override
 	public String toString() {
 		return "\n EQUIPO=>" + nombreEquipo + ", CAJA_ACTUAL=>" + cajaActual +", NºABONADOS=>" + numAbonados + 
-				", ID_EQUIPO=>" + num_equipo + ", \n" + "GASTOS_GENERAL=>" + gasto_general +  "]" ;
+				", ID_EQUIPO=>" + num_equipo  + ", GASTOS_GENERAL=>" + gasto_general +  "]\n" ;
 	}
 	
 	/*  Metodo que va recorriendo el vector de jugadores y uno a uno los va anyadiendo a una 
@@ -168,6 +168,19 @@ public class Equipo {
 			}
 		}
 	}
+	
+	public void setPosicion(String nombreJugador, String posicion){
+		
+		for( int i = 0; i < jugadores.size(); i++ ){
+			//System.out.println("1");
+			if(jugadores.get(i).getNombre().equals(nombreJugador)){
+				
+				jugadores.get(i).setPosicion(posicion);
+				
+			}
+		}
+	}
+	
 
 	// Devuelve el valor de la caja actual. 
 	

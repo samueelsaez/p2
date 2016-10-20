@@ -99,6 +99,7 @@ public class Equipos {
 		}
 		return false;
 	}
+	
 
 	// Metodo que devuelve una lista con todos los jugadores de todos los equipos.
 	
@@ -178,4 +179,24 @@ public class Equipos {
 			}else{System.out.println("\nError al realizar traspaso. \n");}	
 		}
 	}
+	
+	
+	public void setPosicion(String nombreJugador, String posicion){
+		
+		boolean flag=false;
+		
+		for( int i = 0; i < equipos.size(); i++ ){
+			if(equipos.get(i).buscarJugador(nombreJugador)){
+				
+				equipos.get(i).setPosicion(nombreJugador, posicion);
+				System.out.println("Demarcación "+nombreJugador+" modificada");
+				flag=true;
+			}
+		}
+		if(flag==false){
+				System.out.println("Jugador no encontrado - no se ha modificado clausula");
+		}
+	}
 }
+	
+	
