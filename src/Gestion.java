@@ -25,15 +25,16 @@ public class Gestion {
 		
 				System.out.println("------------MENU GESTION EQUIPOS------------\n");
 			
-				System.out.println("1 - REGISTRAR NUEVO EQUIPO");
-				System.out.println("2 - REGISTRAR UN NUEVO JUGADOR");
-				System.out.println("3 - REGISTRAR NUEVO TRANSPASO DE JUGADOR");
-				System.out.println("4 - LISTAR DATOS BASICOS DE LOS EQUIPOS");
-				System.out.println("5 - LISTAR LOS JUGADORES DE CADA EQUIPO");
-				System.out.println("6 - MOSTRAR TRANSPASOS");
-				System.out.println("7 - GUARDAR Y CERRAR APLICACION");
-				System.out.println("8 - CAMBIAR DEMARCACIÓN JUGADOR");
-				System.out.println("9 - EVALUAR EL FAIR PLAY FINANCIERO\n");
+				System.out.println(" 1 - REGISTRAR NUEVO EQUIPO");
+				System.out.println(" 2 - REGISTRAR UN NUEVO JUGADOR");
+				System.out.println(" 3 - REGISTRAR NUEVO TRANSPASO DE JUGADOR");
+				System.out.println(" 4 - LISTAR DATOS BASICOS DE LOS EQUIPOS");
+				System.out.println(" 5 - LISTAR LOS JUGADORES DE CADA EQUIPO");
+				System.out.println(" 6 - MOSTRAR TRANSPASOS");
+				System.out.println(" 7 - GUARDAR Y CERRAR APLICACION");
+				System.out.println(" 8 - CAMBIAR DEMARCACIÓN JUGADOR");
+				System.out.println(" 9 - EVALUAR EL FAIR PLAY FINANCIERO");
+				System.out.println("10 - VERIFICAR DEMARCACIONES DE UN EQUIPO\n");
 				System.out.print("-- Introduzca opcion: ");
 				
 				try{
@@ -131,6 +132,9 @@ public class Gestion {
 						break;
 					case 9:
 						equipos.fairPlay();
+						break;
+					case 10:
+						equipos.verificarDemarc();
 						break;
 					default:
 						// Se dara en caso de que no se de ninguna de los Case anteriores.

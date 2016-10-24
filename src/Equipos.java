@@ -147,6 +147,18 @@ public class Equipos {
 		return listaEquipos + "\n";
 	}
 	
+	public void verificarDemarc(){
+		
+		String ver="";
+		
+		for( int i = 0; i < equipos.size(); i++ ){
+					
+					ver += "\n" + equipos.get(i).getNombreEquipo() + "  " + equipos.get(i).verificarDemarc() + "\n";
+				}
+		System.out.println(ver);
+		
+	}
+	
 	
 	public void fairPlay(){
 		

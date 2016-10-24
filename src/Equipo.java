@@ -49,7 +49,7 @@ public class Equipo {
 		System.out.println("Introduce el nombre del nuevo jugador: ");
 		nombre = nuevo.nextLine();
 		
-		System.out.println("Introduce su posicion (portero, defensa, medio, delantero): ");
+		System.out.println("Introduce su posicion (portero P, defensa F, medio M, delantero D): ");
 		posicion = nuevo.nextLine();
 		
 		System.out.println("Introduce su clausula: ");
@@ -118,6 +118,32 @@ public class Equipo {
 		}
 		
 		return false;
+	}
+	
+	
+	public String verificarDemarc(){
+		
+		int P=0, F=0, M=0, D=0; 
+		
+		for( int i = 0; i < jugadores.size(); i++ ){
+					
+			if(jugadores.get(i).getPosicion().equals("P")){ P++;} 
+			if(jugadores.get(i).getPosicion().equals("F")){ F++;} 
+			if(jugadores.get(i).getPosicion().equals("M")){ M++;}
+			if(jugadores.get(i).getPosicion().equals("D")){ D++;}
+			
+		}
+		
+		if(P>=3&F>=5&M>=4&D>=3){
+			
+			return "El equipo sí que cumple los requisitos de las demarcaciones.";
+			
+		}else{
+			
+			return "El equipo NO cumple los requisitos de las demarcaciones.";
+			
+		}
+
 	}
 	
 	// Metodo que busca un jugador en el vector de jugadores. Si lo encuentra, devuelve true, sino, false.
