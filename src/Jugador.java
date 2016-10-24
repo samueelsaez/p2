@@ -4,7 +4,7 @@ public class Jugador {
 	
 	private String nombre;
 	private String posicion;
-	private float clausula;
+	private float clausula, costeAnual;
 	private static int numprox_jugador = 1;
 	private int num_jugador;
 	
@@ -12,12 +12,13 @@ public class Jugador {
 	
 	// Constructor que crea un jugador con su nombre, posicion y su clausula.
 	
-	public Jugador(String nombre, String posicion, float clausula) {
+	public Jugador(String nombre, String posicion, float clausula, float costeAnual) {
 		
 		this.nombre = nombre;
 		this.posicion = posicion;
 		this.clausula = clausula;
 		this.num_jugador = numprox_jugador++;
+		this.costeAnual = costeAnual;
 	}
 	
 	/*  Metodo para mostrar todos los valores de un objeto, en este caso, el nombre, la posicion y 
@@ -25,7 +26,7 @@ public class Jugador {
 		
 	public String toString(){
 
-		return "NOMBRE: " + nombre + " POSICION: " + posicion + " CLAUSULA: " + clausula;
+		return "NOMBRE: " + nombre + " POSICION: " + posicion + " CLAUSULA: " + clausula + " COSTE ANUAL: "+ costeAnual;
 	}
 
 	// Metodo que devuelve el nombre del jugador
@@ -53,6 +54,16 @@ public class Jugador {
 	public void setPosicion(String posicion) {
 		this.posicion = posicion;
 	}
+
+	public float getCosteAnual() {
+		return costeAnual;
+	}
+
+	public void setCosteAnual(float costeAnual) {
+		this.costeAnual = costeAnual;
+	}
+	
+	
 	
 	
 }

@@ -6,7 +6,7 @@ public class Equipo {
 	//Declaracion de variables a usar en esta clase
 	
 	private String nombreEquipo, nombre, posicion;
-	private float cajaActual, clausula, gasto_general;
+	private float cajaActual, clausula, gasto_general, costeAnual;
 	private int numAbonados, num_equipo;
 	private ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
 	private static int numprox_equipo=1;
@@ -55,7 +55,10 @@ public class Equipo {
 		System.out.println("Introduce su clausula: ");
 		clausula = nuevo1.nextFloat();
 		
-		jugador = new Jugador(nombre, posicion, clausula); // Creamos el nuevo jugador mediante el constructor
+		System.out.println("Introduce su coste Anual (M): ");
+		costeAnual = nuevo1.nextFloat();
+		
+		jugador = new Jugador(nombre, posicion, clausula, costeAnual); // Creamos el nuevo jugador mediante el constructor
 		jugadores.add(jugador);							   // anyadimos el jugador al vector de jugadores
 		
 		
@@ -80,7 +83,7 @@ public class Equipo {
 	
 	public Object getJugador(String nombreJugador){
 		
-		Jugador jugador2 = new Jugador("","",0);
+		Jugador jugador2 = new Jugador("","",0,0);
 		
 		for( int i = 0; i < jugadores.size(); i++ ){
 			
@@ -153,6 +156,19 @@ public class Equipo {
 				
 			}
 			return listaJugadores;
+	}
+	
+	public float sueldoPlantilla(){
+		
+		float sueldo=0;
+		
+		for( int i = 0; i < jugadores.size(); i++ ){
+			
+			sueldo=sueldo+jugadores.get(i).getCosteAnual();
+
+		}
+		
+		return sueldo;
 	}
 
 	// Metodo que busca un jugador en el vector y le cambia la clausula actual. 

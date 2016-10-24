@@ -146,6 +146,27 @@ public class Equipos {
 		
 		return listaEquipos + "\n";
 	}
+	
+	
+	public void fairPlay(){
+		
+		float x=0;
+		String listaEquipos1 = "";
+		
+		for( int i = 0; i < equipos.size(); i++ ){
+			
+			 x=equipos.get(i).getCajaActual()-((equipos.get(i).sueldoPlantilla())*2+equipos.get(i).getGastoGeneral());
+			 
+			 if(x>0){
+				 listaEquipos1 += "\n" + equipos.get(i).toString() + "  => CUMPLE FAIR PLAY";
+			 }else{
+				 listaEquipos1 += "\n" + equipos.get(i).toString() + "  => NO CUMPLE FAIR PLAY";
+			 }
+		}
+		
+		System.out.println(listaEquipos1);
+		
+	}
 
 	// Metodo que realiza el traspaso de dos jugadores.
 	

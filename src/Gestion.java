@@ -32,7 +32,8 @@ public class Gestion {
 				System.out.println("5 - LISTAR LOS JUGADORES DE CADA EQUIPO");
 				System.out.println("6 - MOSTRAR TRANSPASOS");
 				System.out.println("7 - GUARDAR Y CERRAR APLICACION");
-				System.out.println("8 - CAMBIAR DEMARCACIÓN JUGADOR\n");
+				System.out.println("8 - CAMBIAR DEMARCACIÓN JUGADOR");
+				System.out.println("9 - EVALUAR EL FAIR PLAY FINANCIERO\n");
 				System.out.print("-- Introduzca opcion: ");
 				
 				try{
@@ -127,6 +128,9 @@ public class Gestion {
 							 
 						equipos.setPosicion(nameJugador, posicionNew);
 						
+						break;
+					case 9:
+						equipos.fairPlay();
 						break;
 					default:
 						// Se dara en caso de que no se de ninguna de los Case anteriores.
