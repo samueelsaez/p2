@@ -136,11 +136,11 @@ public class Equipo {
 		
 		if(P>=3&F>=5&M>=4&D>=3){
 			
-			return "El equipo sí que cumple los requisitos de las demarcaciones.";
+			return "El equipo sí que cumple los requisitos de las demarcaciones. Porteros: "+P+" Defensas: "+F+" Medios: "+M+" Delanteros: "+D;
 			
 		}else{
 			
-			return "El equipo NO cumple los requisitos de las demarcaciones.";
+			return "El equipo NO cumple los requisitos de las demarcaciones. Porteros: "+P+" Defensas: "+F+" Medios: "+M+" Delanteros: "+D;
 			
 		}
 
